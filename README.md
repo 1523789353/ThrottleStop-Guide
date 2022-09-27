@@ -1,8 +1,13 @@
 # [尚未完成] ThrottleStop 使用指南
 
-**警告：超频有风险，超频时的不当操作可能会导致死机、蓝屏，严重可能会导致部件虚焊、烧毁，请考虑好再超频，超频造成的一切后果本人概不负责。**
+**警告：**
 
-**提示：本文使用的是ThrottleStop 9.5版本，可能与老版本界面布局不一致。**
+* **超频有风险，超频时的不当操作可能会导致死机、蓝屏，严重可能会导致部件虚焊、烧毁，请考虑好再超频，超频造成的一切后果本人概不负责。**
+
+**提示：**
+
+* 本文使用的是ThrottleStop 9.5版本，可能与老版本界面布局不一致。
+* 如有界面显示不全，请点击右下角 + 号按钮
 
 ## 首次下载安装
 
@@ -32,14 +37,33 @@
 | ▢Power Saver      | 节能: 降频                                         | 仅当禁用睿频时可用，启用后会使CPU空闲时的时钟频率降至最低                                                                                                                                                                                       |
 | ▢Disable Turbo    | 禁用睿频                                           | 选中时将禁用 CPU 的睿频。在限制功耗和温度的时候非常管用。                                                                                                                                                                                       |
 | ▢BD PROCHOT       | 温度墙                                             | 100 或 105C时触发的紧急限制，降低倍频防止电脑过热烧毁，一般不建议禁用。                                                                                                                                                                         |
-| ▢C1E              | C1 enhanced state<br />节能: C1增强状态            | 当您的PC低负载时，它会降低频率和电压，从而减少功耗和热量。<br />* 某些网站声称关闭此选项能略微提高CPU和SSD的性能                                                                                                                                |
+| ▢C1E              | C1 Enhanced State<br />节能: C1增强状态            | 当您的PC低负载时，它会降低频率和电压，从而减少功耗和热量。<br />* 某些网站声称关闭此选项能略微提高CPU和SSD的性能                                                                                                                                |
 | ▢Task Bar         | 缩小到任务栏                                       | 缩小到任务栏，而不是隐藏到任务栏图标。                                                                                                                                                                                                          |
 | ▢Log File         | 启用日志文件                                       | 将运行日志写入到文件中，以便于在日志中分析性能限制因素。                                                                                                                                                                                        |
 | ▢More Data        | 更多数据                                           | 更快的数据采样。                                                                                                                                                                                                                                |
 
 ### 主界面 - 右侧
 
-...
+* **上方**显示的是CPU信息，分别为**电压**、**倍频x外频**、**频率**
+* **中间**表格显示的是所有CPU核心的信息
+  * 从上到下分别为第1~8个核心
+  * 从左往右分别是倍频、负载、最大频率百分比、核心温度、Max最高温度)/Min(最低温度)
+* **下方**
+  * 第一行是CPU的平均负载、平均温度、最高温度
+  * 第二行是封装的实时功耗、最大功耗
+  * 第三行 Limits 菜单，右侧在撞温度墙后会显示红色HOT、PROCHOT 97°C字样
+  * 最后一行是FIVR菜单、TPL菜单、C8菜单，以及Clear按钮(清除统计数据)
+
+### 主界面 - 最下方一排
+
+| 界面元素         | 功能     | 说明                                                                   |
+| ---------------- | -------- | ---------------------------------------------------------------------- |
+| Save             | 保存     | 将当前配置保存到ThrottleStop.ini                                       |
+| Options          | 选项     | 配置ThrottleStop界面选项                                               |
+| Turn Off/Turn On | 开关     | 开关ThrottleStop，点击Turn Off关闭ThrottleStop功能                     |
+| TS Bench         | 测试     | 简单的跑分测试，时间越短越好                                           |
+| Battery          | 电池监视 | 在Option中勾选Battery Monitoring启用，监视电池信息，点击切换监视的数据 |
+| GPU              | 显卡监视 | 在Option中勾选Nvidia GPU/AMD GPU启用，监视显卡信息，点击切换监视的数据 |
 
 ## 术语
 
@@ -50,3 +74,4 @@
 1. [ThrottleStop Guide](https://www.ultrabookreview.com/31385-the-throttlestop-guide/)
 2. [What does Intel Speed Shift do?](https://forums.tomshardware.com/threads/what-does-intel-speed-shift-do.3574107/)
 3. [What is &#34;C1E support&#34; on my AMD CPU?](https://superuser.com/questions/184569/what-is-c1e-support-on-my-amd-cpu)
+4. [Processor states](https://en.wikipedia.org/wiki/Advanced_Configuration_and_Power_Interface#Processor_states)
